@@ -7,19 +7,99 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #1d5d99;
+  --ifm-color-primary-dark: #1a548a;
+  --ifm-color-primary-darker: #194f82;
+  --ifm-color-primary-darkest: #14416b;
+  --ifm-color-primary-light: #2066a8;
+  --ifm-color-primary-lighter: #216bb0;
+  --ifm-color-primary-lightest: #2679c7;
+
+  --ifm-color-secondary: #887400;
+  --ifm-color-secondary-dark: #7a6800;
+  --ifm-color-secondary-darker: #746300;
+  --ifm-color-secondary-darkest: #5f5100;
+  --ifm-color-secondary-light: #968000;
+  --ifm-color-secondary-lighter: #9c8500;
+  --ifm-color-secondary-lightest: #b19700;
+
+  /* --ifm-color-danger: #ff6188; */
+  /* --ifm-color-danger-dark: #ff3e6d; */
+  /* --ifm-color-danger-darker: #ff2c60; */
+  /* --ifm-color-danger-darkest: #f6003d; */
+  /* --ifm-color-danger-light: #ff84a3; */
+  /* --ifm-color-danger-lighter: #ff96b0; */
+  /* --ifm-color-danger-lightest: #ffcbd8; */
+  /*  */
+  /* --ifm-color-success: #a9dc76; */
+  /* --ifm-color-success-dark: #98d55b; */
+  /* --ifm-color-success-darker: #90d24e; */
+  /* --ifm-color-success-darkest: #76bc30; */
+  /* --ifm-color-success-light: #bae391; */
+  /* --ifm-color-success-lighter: #c2e69e; */
+  /* --ifm-color-success-lightest: #dcf1c7; */
+  /*  */
+  /* --ifm-color-info: #78dce8; */
+  /* --ifm-color-info-dark: #5ad4e3; */
+  /* --ifm-color-info-darker: #4bd0e0; */
+  /* --ifm-color-info-darkest: #24c0d3; */
+  /* --ifm-color-info-light: #96e4ed; */
+  /* --ifm-color-info-lighter: #a5e8f0; */
+  /* --ifm-color-info-lightest: #d2f3f7; */
+  /*  */
+  /* --ifm-color-warning: #ffd866; */
+  /* --ifm-color-warning-dark: #ffcf42; */
+  /* --ifm-color-warning-darker: #ffca30; */
+  /* --ifm-color-warning-darkest: #faba00; */
+  /* --ifm-color-warning-light: #ffe18a; */
+  /* --ifm-color-warning-lighter: #ffe69c; */
+  /* --ifm-color-warning-lightest: #fff3d1; */
+
+  --ifm-navbar-background-color: #f9f9f9;
+  --ifm-background-surface-color: #f9f9f9;
+  --ifm-background-surface-color-secondary: #f3f3f3;
+  --ifm-background-color: #ffffff;
+
+  /* --ifm-heading-color: #000000; */
+  /* --ifm-hero-text-color: #000000; */
+  /* --ifm-blockquote-color: #3c3c3c; */
+
   --ifm-code-font-size: 95%;
 }
 
-.docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+.footer.footer--dark {
+  --ifm-footer-background-color: #272822;
+  --ifm-color-secondary: #f0f0f0;
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #2a85db;
+  --ifm-color-primary-dark: #2278c9;
+  --ifm-color-primary-darker: #2071be;
+  --ifm-color-primary-darkest: #1a5d9c;
+  --ifm-color-primary-light: #4092df;
+  --ifm-color-primary-lighter: #4b98e1;
+  --ifm-color-primary-lightest: #6dabe6;
+
+  --ifm-color-secondary: #b29700;
+  --ifm-color-secondary-dark: #a08800;
+  --ifm-color-secondary-darker: #978000;
+  --ifm-color-secondary-darkest: #7d6a00;
+  --ifm-color-secondary-light: #c4a600;
+  --ifm-color-secondary-lighter: #cdae00;
+  --ifm-color-secondary-lightest: #e7c400;
+
+  --ifm-background-color: #1f201c;
+  --ifm-background-surface-color: #272822;
+  --ifm-background-surface-color-secondary: #2a2b25;
+  --ifm-navbar-background-color: #272822;
+
+  --ifm-code-background: #2e2f28;
+  --ifm-code-color: #ffffff;
+
+  /* background-color: #1f201c; */
+
+  /* --ifm-heading-color: #ffffff; */
+  /* --ifm-hero-text-color: #ffffff; */
+  --ifm-blockquote-color: #c0c0c0;
 }

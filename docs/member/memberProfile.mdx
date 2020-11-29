@@ -1,0 +1,88 @@
+---
+id: member-profile
+title: Member Profile
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Highlight } from '../../src/components/highlight.tsx'
+import Icon from '@mdi/react'
+import {
+  mdiMagnify,
+  mdiCloudDownload,
+  mdiViewColumn,
+  mdiFilterVariant,
+  mdiPrinter,
+  mdiShareVariant
+} from '@mdi/js'
+
+The Member Profile Page is the first page you see once you log into CertGround&trade;. From this page you can see all your account details as well as share and / or print your course certifications.
+
+## Overview
+
+### Desktop View
+
+<img src={useBaseUrl('img/member-profile.png')} alt="Member Profile Page" />
+
+At the top left of the screen will be:
+- your organization's logo
+- your name,
+- member type,
+- email address
+
+The top right of the screen shows:
+- course completed fraction / percentage
+- safety course completed fraction / percentage
+- whether you are job ready (have all required courses)
+- login count
+- and a toggle button to change the units of the previously mentioned infomation
+
+There are 3 tab panels in the middle: STATUS, COURSES, & AVAILABLE.
+
+At the bottom you will see completion progress bars for all courses and safety courses only.
+
+## Panels
+
+### Status Tab
+<img src={useBaseUrl('img/member-profile-status.png')} alt="Member Profile Status Tab" />
+
+The Status Tab has your usage infomation:
+- qrcode generated count
+- total classes completed
+- login count
+- next course expiring and the date
+
+### Courses Tab
+<img src={useBaseUrl('img/historical-dates-trained.png')} alt="Member Profile historical dates trained" />
+
+The Courses Tab has your course completion infomation. You will see a list of all the courses that you have completed and:
+- course name
+- course type
+- last date trained
+- expiry date
+
+Selecting a course will show a dropdown of all the historical dates you have been trained.
+
+If a Course has an <Highlight color="warning">orange</Highlight> background then the course is within **6 months** to the expiry date.
+
+If a Course has an <Highlight color="danger">red</Highlight> background then the course has **Expired!**
+
+The **Courses Tab** also gives you the ability to [share your coures certifications](cert-share#qrcode) or [print of proof of training](cert-share#print)
+
+At the top right of the Member Courses table you will see the following buttons:
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src={useBaseUrl('img/member-profile-course-table-buttons.png')} alt="Member profile course tab table buttons" />
+</div>
+
+- <Icon size={1} path={mdiMagnify} /> search
+- <Icon size={1} path={mdiCloudDownload} /> download csv copy
+- <Icon size={1} path={mdiViewColumn} /> column show/hide
+- <Icon size={1} path={mdiFilterVariant} /> filter table:
+
+  - course type
+  - within warning range
+  - expired
+- <Icon size={1} path={mdiPrinter} /> print selected courses
+- <Icon size={1} path={mdiShareVariant} /> qrcode share selected courses
+
+#### Available Tab
+

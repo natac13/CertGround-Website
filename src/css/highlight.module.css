@@ -1,0 +1,28 @@
+.general {
+  color: #000;
+  padding: 0.3rem;
+}
+
+.primary {
+  background: var(--ifm-color-primary);
+}
+
+.secondary {
+  background: var(--ifm-color-secondary);
+}
+
+.success {
+  background: var(--ifm-color-success);
+}
+
+.info {
+  background: var(--ifm-color-info);
+}
+
+.warning {
+  background: var(--ifm-color-warning);
+}
+
+.danger {
+  background: var(--ifm-color-danger);
+}

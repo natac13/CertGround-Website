@@ -7,85 +7,88 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Sean Paul Campbell', // Usually your GitHub org/user name.
-  projectName: 'CertGround', // Usually your repo name.
+  organizationName: 'natac13', // Usually your GitHub org/user name.
+  projectName: 'CertGround-Website', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark'
+    },
     navbar: {
       title: 'CertGround',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'CertGround Momogram Logo',
+        src: 'img/CertGround-Monogram-White-BlueBG.png'
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/about',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left',
+          position: 'left'
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'clients', label: 'Clients', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
-          position: 'right',
+          position: 'right'
         },
         {
           href: 'https://demo.certground.com',
           label: 'Demo App',
-          position: 'right',
-        },
-      ],
+          position: 'right'
+        }
+      ]
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Legal',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Privacy Policy',
+              to: 'privacy-policy'
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
-          ],
+              label: 'End User License Agreement (EULA)',
+              to: 'eula'
+            }
+          ]
         },
         {
           title: 'Community',
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discordapp.com/invite/docusaurus'
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
+              href: 'https://twitter.com/docusaurus'
+            }
+          ]
         },
         {
           title: 'More',
           items: [
             {
               label: 'Blog',
-              to: 'blog',
+              to: 'blog'
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
+              href: 'https://github.com/natac13'
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sean Paul Campbell`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} Sean Paul Campbell`
+    }
   },
   presets: [
     [
@@ -95,18 +98,18 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/facebook/docusaurus/edit/master/website/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
+  ]
 }
