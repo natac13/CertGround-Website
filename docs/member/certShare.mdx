@@ -2,3 +2,90 @@
 id: cert-share
 title: Certificate Sharing
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import Icon from '@mdi/react'
+import {
+  mdiMagnify,
+  mdiCloudDownload,
+  mdiViewColumn,
+  mdiFilterVariant,
+  mdiPrinter,
+  mdiShareVariant,
+  mdiQrcode
+} from '@mdi/js'
+
+
+## QRCode Share
+
+From the Member Profile page, under the **Courses** tab you are able to share your course certifications by generating a QRCode.
+
+**Steps**
+1. Click the Share Icon Button at the top right of the member courses table. <Icon size={1} path={mdiShareVariant} />
+
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src={useBaseUrl('../../static/img/member-profile-course-table-buttons.png')} alt="member course table buttons" />
+</div>
+
+2. Select the Courses you want to share.
+
+:::caution
+You cannot share expired courses
+:::
+
+<img src={useBaseUrl('../../static/img/qrcode-course-select.png')} alt="qrcode course select" />
+
+3. Generate the QRCode and link. <Icon size={1} path={mdiQrcode} />
+
+
+4. Scan the QRCode or share the link with:
+- copying the share table link
+- go directly to the share table
+- emailing the link
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src={useBaseUrl('../../static/img/qrcode-dialog.png')} alt="qrcode dialog" />
+</div>
+
+5. This will direct whoever you shared the link with to the [Certifcate Share Table](#certificate-share-table)
+
+### Certificate Share Table
+The Certificate Share Table page will look similar to the following;
+
+At the top will be your organization's letter head, with a table showing the selected courses to share underneath.
+
+There are options to:
+- <Icon size={1} path={mdiCloudDownload} /> download a csv
+- <Icon size={1} path={mdiPrinter} /> print the shared course certifications
+
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src={useBaseUrl('../../static/img/qrcode-share-page.png')} alt="qrcode share table" />
+</div>
+
+
+## Print Proof of Training
+
+There is also the option to print off selected course certification *without* the need to generate a QRCode. This is useful for those without a data plan on their cell phones.
+
+**Steps**
+
+1. Select the Printer icon button. <Icon size={1} path={mdiPrinter} />
+
+<div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+<img src={useBaseUrl('../../static/img/member-profile-course-table-buttons.png')} alt="member course table buttons" />
+</div>
+
+2. Select the courses you want to share.
+
+<div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+<img src={useBaseUrl('../../static/img/cert-print-select.png')} alt="print course select" />
+</div>
+
+3. Print off Proof of Training.
+
+<div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+<img src={useBaseUrl('../../static/img/proof-of-training.png')} alt="print course select" />
+</div>
+
+:::info
+The page printed is the same as if you were to use the QRCode share option and use the print functionality on the [Certificate Share Table](#certificate-share-table)
+:::
+
