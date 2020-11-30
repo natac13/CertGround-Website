@@ -9,10 +9,6 @@ module.exports = {
       id: 'getting-started'
     },
     {
-      type: 'doc',
-      id: 'dashboard'
-    },
-    {
       type: 'category',
       label: 'Members',
       items: [
@@ -56,24 +52,10 @@ module.exports = {
           ]
         }
       ]
+    },
+    {
+      type: 'doc',
+      id: 'dashboard'
     }
-  ],
-  someSidebar: {
-    CertGround: ['about', 'getting-started', 'dashboard'],
-    Members: []
-    // Admins: [
-    //   {
-    //     Classes: ['create', 'calendar', 'search'],
-    //     Members: [
-    //       'create',
-    //       'list',
-    //       'search',
-    //       'course-certify',
-    //       'required-course-payment',
-    //       'spreadsheet-csv'
-    //     ],
-    //     Courses: ['create', 'list', 'job-ready']
-    //   }
-    // ]
-  }
+  ]
 }

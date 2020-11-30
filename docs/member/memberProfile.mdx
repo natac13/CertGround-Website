@@ -20,7 +20,6 @@ The Member Profile Page is the first page you see once you log into CertGround&t
 ## Overview
 
 ### Desktop View
-
 <img src={useBaseUrl('img/member-profile.png')} alt="Member Profile Page" />
 
 At the top left of the screen will be:
@@ -36,9 +35,10 @@ The top right of the screen shows:
 - login count
 - and a toggle button to change the units of the previously mentioned infomation
 
+:::info
 There are 3 tab panels in the middle: STATUS, COURSES, & AVAILABLE.
+:::
 
-At the bottom you will see completion progress bars for all courses and safety courses only.
 
 ## Panels
 
@@ -60,18 +60,21 @@ The Courses Tab has your course completion infomation. You will see a list of al
 - last date trained
 - expiry date
 
+At the bottom you will see completion progress bars for all courses and safety courses only.
+
 Selecting a course will show a dropdown of all the historical dates you have been trained.
+:::note
+If a Course has an <Highlight variant="warning">orange</Highlight> background then the course is within **6 months** to the expiry date.
 
-If a Course has an <Highlight color="warning">orange</Highlight> background then the course is within **6 months** to the expiry date.
-
-If a Course has an <Highlight color="danger">red</Highlight> background then the course has **Expired!**
-
-The **Courses Tab** also gives you the ability to [share your coures certifications](cert-share#qrcode) or [print of proof of training](cert-share#print)
+If a Course has an <Highlight variant="danger">red</Highlight> background then the course has **Expired!**
+:::
+:::info Sharing Certification
+The **Courses Tab** also gives you the ability to [share your coures certifications](cert-share#qrcode) or [print off proof of training](cert-share#print)
+:::
 
 At the top right of the Member Courses table you will see the following buttons:
-<div style={{display: 'flex', justifyContent: 'center'}}>
+<div style={{display: 'flex', justifyContent: 'space-evenly', flexFlow: 'row wrap'}}>
 <img src={useBaseUrl('img/member-profile-course-table-buttons.png')} alt="Member profile course tab table buttons" />
-</div>
 
 - <Icon size={1} path={mdiMagnify} /> search
 - <Icon size={1} path={mdiCloudDownload} /> download csv copy
@@ -84,5 +87,20 @@ At the top right of the Member Courses table you will see the following buttons:
 - <Icon size={1} path={mdiPrinter} /> print selected courses
 - <Icon size={1} path={mdiShareVariant} /> qrcode share selected courses
 
-#### Available Tab
+</div>
+
+### Available Tab
+
+Will show all courses that you are not currently certified in; either from an expired course or not yet trained.
+You will be able to visit the [Class Calendar](./class-calendar) page to see any upcoming classes for these courses.
+
+<div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+
+<img src={useBaseUrl('img/member-profile-available-tab.png')} alt="member profile avilable tab" />
+</div>
+
+:::note
+- <Highlight color="#3b9cb5">Blue</Highlight> backgrounds represent <strong>SKILLS</strong> courses.
+- <Highlight color="#6f9957">Green</Highlight> backgrounds represent <strong>SAFETY</strong> courses.
+:::
 

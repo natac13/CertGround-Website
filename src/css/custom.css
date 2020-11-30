@@ -64,12 +64,17 @@
   /* --ifm-hero-text-color: #000000; */
   /* --ifm-blockquote-color: #3c3c3c; */
 
-  --ifm-code-font-size: 95%;
+  /* --ifm-code-font-size: 95%; */
 }
 
 .footer.footer--dark {
   --ifm-footer-background-color: #272822;
   --ifm-color-secondary: #f0f0f0;
+}
+
+.alert--secondary {
+  --ifm-alert-background-color: #f3f3f3;
+  --ifm-alert-border-color: #f3f3f3;
 }
 
 html[data-theme='dark'] {

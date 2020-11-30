@@ -4,7 +4,7 @@ title: Getting Started
 sidebar_label:  Getting Started
 slug: /getting-started
 ---
-
+import useBaseUrl from '@docusaurus/useBaseUrl'
 import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js'
 
@@ -26,7 +26,7 @@ If the notifcation has a red background there was an error.
 7. There will be an email sent to your inbox to confirm your email address and account registration.
     - The email will be from an address which looks like the following.
     - **Trainin Coordinator <noreply@training.[YOUR ORGANIZATION].certground.com**
-    - - your organization's letter head will be included at the top of the email.
+    - your organization's letter head will be included at the top of the email.
 8. Please read the email and follow the link **'Complete Registration to CertGround&trade;'**.
 9. The link should re-direct you to the login page.
 10. Please enter your email and password to view your profile.
@@ -34,6 +34,13 @@ If the notifcation has a red background there was an error.
 ## Navigation
 
 You can navigate throughout CertGround using the Menu found in the top right cornor.
-<button className="button button--primary button--sm">
-<Icon path={mdiMenu} size={1} color="white" />
-</button>
+<div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+<img src={useBaseUrl('../static/img/nav-button.png')} alt="nav menu button" />
+</div>
+
+You will see a menu very similar to the example shown in the picture below;
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src={useBaseUrl('../static/img/nav-menu.png')} alt="nav menu button" />
+</div>
+
+
