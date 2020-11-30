@@ -21,7 +21,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/about',
+          to: 'docs/getting-started',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left'
@@ -29,7 +29,7 @@ module.exports = {
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'clients', label: 'Clients', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/natac13/CertGround-Website',
           label: 'GitHub',
           position: 'right'
         },
@@ -57,23 +57,6 @@ module.exports = {
           ]
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus'
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus'
-            }
-          ]
-        },
-        {
           title: 'More',
           items: [
             {
@@ -81,8 +64,21 @@ module.exports = {
               to: 'blog'
             },
             {
+              label: 'Demo App',
+              href: 'https://demo.certground.com'
+            }
+          ]
+        },
+        {
+          title: 'Sean Campbell',
+          items: [
+            {
               label: 'GitHub',
               href: 'https://github.com/natac13'
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/seancampbellnatac/'
             }
           ]
         }
@@ -96,15 +92,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/'
+          editUrl: 'https://github.com/natac13/CertGround-Website/edit/master/'
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/'
+          editUrl: 'https://github.com/natac13/CertGround-Website/edit/master/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
