@@ -19,6 +19,8 @@
 }
 
 .getStarted {
+  border-style: solid;
+  border-width: 1px;
 }
 
 .getStarted:hover,

@@ -35,12 +35,12 @@ If the notifcation has a red background there was an error.
 
 You can navigate throughout CertGround using the Menu found in the top right cornor.
 <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
-<img src={useBaseUrl('../static/img/nav-button.png')} alt="nav menu button" />
+<img src={useBaseUrl('img/nav-button.png')} alt="nav menu button" />
 </div>
 
 You will see a menu very similar to the example shown in the picture below;
 <div style={{display: 'flex', justifyContent: 'center'}}>
-<img src={useBaseUrl('../static/img/nav-menu.png')} alt="nav menu button" />
+<img src={useBaseUrl('img/nav-menu.png')} alt="nav menu button" />
 </div>
 
 

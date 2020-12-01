@@ -16,7 +16,7 @@ const H2Heading = Heading('h2')
 const clients = [
   {
     name: 'IBEW120',
-    imageUrl: '../../static/img/IBEW120.png'
+    imageUrl: 'img/IBEW120.png'
   }
 ]
 
@@ -62,7 +62,6 @@ export const features = [
 const Home: React.FC = () => {
   const context = useDocusaurusContext()
   const { siteConfig = {} } = context
-  console.log(Heading)
 
   return (
     <Layout
@@ -78,9 +77,10 @@ const Home: React.FC = () => {
             >
               <ThemedImage
                 sources={{
-                  dark: 'img/CertGround-Monogram-White-BlueBG.png',
-                  light:
-                    '../../static/img/CertGround-Monogram-White-TransparentBG.png'
+                  dark: useBaseUrl('img/CertGround-Monogram-White-BlueBG.png'),
+                  light: useBaseUrl(
+                    'img/CertGround-Monogram-White-TransparentBG.png'
+                  )
                 }}
                 alt="CertGround™ monogram logo"
                 width={200}

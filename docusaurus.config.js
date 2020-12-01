@@ -49,6 +49,14 @@ module.exports = {
       style: 'dark',
       links: [
         {
+          title: 'Docs',
+          items: [
+            { label: 'Getting Started', to: 'docs/getting-started' },
+            { label: 'Certification Sharing', to: 'docs/member/cert-share' },
+            { label: 'FAQs', to: 'docs/faqs' }
+          ]
+        },
+        {
           title: 'Legal',
           items: [
             {
@@ -64,10 +72,6 @@ module.exports = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Docs',
-              to: '/docs/getting-started'
-            },
             {
               label: 'Blog',
               to: 'blog'
@@ -96,6 +100,10 @@ module.exports = {
           ]
         }
       ],
+      logo: {
+        alt: 'CertGround™',
+        src: 'img/CertGround-Logo-Full-White-BlueBG.png'
+      },
       copyright: `Copyright © ${new Date().getFullYear()} Sean Paul Campbell`
     }
   },
