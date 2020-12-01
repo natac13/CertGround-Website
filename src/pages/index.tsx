@@ -1,62 +1,69 @@
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import { mdiClipboardText, mdiShareVariant, mdiTargetAccount } from '@mdi/js'
 import Layout from '@theme/Layout'
 import clsx from 'clsx'
 import React from 'react'
+import { Feature } from '../components/Feature'
+import { Client } from '../components/Client'
 import styles from './styles.module.css'
+import Heading from '@theme/Heading'
+import ThemedImage from '@theme/ThemedImage'
 
-const features = [
+const H2Heading = Heading('h2')
+
+const clients = [
   {
-    title: 'Easy to Use',
-    // imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    // imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    // imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+    name: 'IBEW120',
+    imageUrl: '../../static/img/IBEW120.png'
+  }
 ]
 
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl)
-  return (
-    <div className={clsx('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  )
-}
+export const features = [
+  {
+    title: 'Simple Training Center Management',
+    icon: mdiClipboardText,
+    description: (
+      <>
+        Control all your training records in one place with ease! Create the
+        Courses offered, schedule Classes for members to attend, then complete
+        those Classes, saving the training records of the Members who
+        successfully completed the Course.
+      </>
+    )
+  },
+  {
+    title: 'Focused on Ease of Use.',
+    icon: mdiTargetAccount,
+    description: (
+      <>
+        CertGround™ was designed to be as automatic as possible. Your job is
+        running your Training Center, let CertGround™ worry about the record
+        keeping. Plus every week your membership is checked for upcoming expired
+        Courses; an email notice is sent to those affected.
+      </>
+    )
+  },
+  {
+    title: 'Sustainable Record Keeping & Certifcate Sharing',
+    icon: mdiShareVariant,
+    description: (
+      <>
+        By moving your training center&apos;s record keeping to CertGround™ your
+        membership gains the ability to share their Course Certifications with
+        new employers. Members can generate a QRCode which with link to a
+        Certification Share Table. <strong>No more plastic cards!</strong>
+      </>
+    )
+  }
+]
 
-function Home() {
+const Home: React.FC = () => {
   const context = useDocusaurusContext()
   const { siteConfig = {} } = context
+  console.log(Heading)
+
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -64,6 +71,22 @@ function Home() {
     >
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
+          <div className="row">
+            <div
+              className="col"
+              style={{ display: 'flex', justifyContent: 'center' }}
+            >
+              <ThemedImage
+                sources={{
+                  dark: 'img/CertGround-Monogram-White-BlueBG.png',
+                  light:
+                    '../../static/img/CertGround-Monogram-White-TransparentBG.png'
+                }}
+                alt="CertGround™ monogram logo"
+                width={200}
+              />
+            </div>
+          </div>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
@@ -72,7 +95,7 @@ function Home() {
                 'button button--outline button--lg',
                 styles.getStarted
               )}
-              to={useBaseUrl('docs/')}
+              to={useBaseUrl('docs/getting-started')}
             >
               Get Started
             </Link>
@@ -83,12 +106,29 @@ function Home() {
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
+              <div className={clsx('row', styles.featuresRow)}>
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
               </div>
             </div>
+          </section>
+        )}
+
+        {clients && clients.length > 0 && (
+          <section className={styles.clientsWrapper}>
+            <H2Heading id="clients" className={styles.clientsHeader}>
+              Happy Clients
+            </H2Heading>
+            <section className={styles.clients}>
+              <div className="container">
+                <div className="row">
+                  {clients.map((props, idx) => (
+                    <Client key={idx} {...props} />
+                  ))}
+                </div>
+              </div>
+            </section>
           </section>
         )}
       </main>

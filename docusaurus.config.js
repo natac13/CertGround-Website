@@ -27,7 +27,12 @@ module.exports = {
           position: 'left'
         },
         { to: 'blog', label: 'Blog', position: 'left' },
-        { to: 'clients', label: 'Clients', position: 'left' },
+        // {
+        //   to: '/#clients',
+        //   activeBasePath: '/',
+        //   label: 'Clients',
+        //   position: 'left'
+        // },
         {
           href: 'https://github.com/natac13/CertGround-Website',
           label: 'GitHub',
@@ -60,8 +65,16 @@ module.exports = {
           title: 'More',
           items: [
             {
+              label: 'Docs',
+              to: '/docs/getting-started'
+            },
+            {
               label: 'Blog',
               to: 'blog'
+            },
+            {
+              label: 'Clients',
+              to: '/#clients'
             },
             {
               label: 'Demo App',
