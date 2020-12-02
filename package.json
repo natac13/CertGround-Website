@@ -7,7 +7,10 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "predeploy": "yarn run build",
+    "deploy": "aws s3 sync ./build s3://certground.com --exact-timestamps --delete",
+    "invalidate": "./cdn-cache-invalidate.sh",
+    "postdeploy": "yarn run invalidate",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear"
   },
