@@ -1,23 +1,26 @@
 import React from 'react'
 import clsx from 'clsx'
-import style from '../css/highlight.module.css'
+import styles from '../css/highlight.module.css'
 import { Color } from '../types/general'
 
 interface Props {
   children: React.ReactNode
   variant?: Color
   color?: string
+  style?: Record<string, string>
 }
 
 export const Highlight: React.FC<Props> = ({
   children,
   variant,
-  color
+  color,
+  style = {}
 }: Props) => (
   <span
-    className={clsx(style.general, style[variant])}
+    className={clsx(styles.general, styles[variant])}
     style={{
-      backgroundColor: color
+      backgroundColor: color,
+      ...style
     }}
   >
     {children}

@@ -15,6 +15,20 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Helper Tools',
+      items: [
+        {
+          type: 'category',
+          label: 'Electrical',
+          items: [
+            'tools/electrical/phase-color-finder',
+            'tools/electrical/conduit-bending-chart'
+          ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Admins',
       items: [
         {
