@@ -19,7 +19,7 @@ export const Feature: React.FC<Props> = ({
 }: Props) => {
   const imgUrl = useBaseUrl(imageUrl)
   return (
-    <div className={clsx('col col--6', styles.feature)}>
+    <div className={clsx('col col--4', styles.feature)}>
       <div className="text--center">
         {icon ? (
           <Icon size={4} path={icon} />

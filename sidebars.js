@@ -10,19 +10,19 @@ module.exports = {
       items: [
         'member/member-profile',
         'member/cert-share',
-        'member/class-calendar'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Helper Tools',
-      items: [
+        'member/class-calendar',
         {
           type: 'category',
-          label: 'Electrical',
+          label: 'Helper Tools',
           items: [
-            'tools/electrical/phase-color-finder',
-            'tools/electrical/conduit-bending-chart'
+            {
+              type: 'category',
+              label: 'Electrical',
+              items: [
+                'member/tools/electrical/phase-color-finder',
+                'member/tools/electrical/conduit-bending-chart'
+              ]
+            }
           ]
         }
       ]

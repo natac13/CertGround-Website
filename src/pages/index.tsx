@@ -16,7 +16,8 @@ const H2Heading = Heading('h2')
 const clients = [
   {
     name: 'IBEW120',
-    imageUrl: 'img/IBEW120.png'
+    imageUrl: 'img/IBEW120.png',
+    website: 'ibew120.ca'
   }
 ]
 
