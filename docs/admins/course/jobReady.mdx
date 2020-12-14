@@ -3,3 +3,72 @@ id: job-ready
 title: Job Ready Courses
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Highlight } from '../../../src/components/highlight'
+
+The page gives you the ability to change which Courses are _required_ for a member to have **[Job Ready](#job-ready-status)** status.
+
+## Job Ready Status
+
+:::note
+When the member has completed all the Courses that are selected as _Required_ Courses.
+
+Courses must also be valid, meaning not expired.
+:::
+
+### Where to View Job Ready Status
+
+The Member can view their Job Ready Status on the [Member Profile page](../../member/member-profile#top-overview-section).
+
+Admins can view a Member's Job Ready Status with:
+
+- [Member Search page](../member/search#default-member-search---job-ready-table-view-preview)
+- [Member Detail page](../member/details)
+
+## How to Change Required Courses
+
+There are 2 lists of courses:
+
+1. Not Required
+2. Job Ready Required
+
+Select which Courses are to be transfered from one list to the other, then select the corresponding button which shows an arrow for the direction of transfer. You will then be in the [ALTERED state](#altered-state)
+
+:::info
+There is an aria-label to explain this action for screen readers.
+:::
+
+### Default View
+
+<img
+  src={useBaseUrl('img/admin/courses/course-job-ready.png')}
+  alt="change job ready default"
+/>
+
+### Altered State
+
+Once you have transfered the Courses from one list to the other the page will show you is the **ALTERED** state.
+
+When you are satisfied with the changes, click the UPDATE JOB READY COURSES button below the transfer lists. This will take you to the [SAVED state](#saved-state)
+
+:::note
+You can reset the lists back to the Original with the RESET button.
+:::
+
+<img
+  src={useBaseUrl('img/admin/courses/course-job-ready-altered.png')}
+  alt="change job ready altered"
+/>
+
+### Saved State
+
+When you update the Job Ready Courses you will see a <Highlight variant="success">Green</Highlight> notification appear at the top right of the screen.
+
+:::caution
+Now that you have saved the new Required Courses you cannot reset back to the original.
+:::
+
+<img
+  src={useBaseUrl('img/admin/courses/course-job-ready-saved.png')}
+  alt="change job ready saved"
+/>
