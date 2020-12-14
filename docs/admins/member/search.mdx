@@ -2,3 +2,63 @@
 id: search
 title: Member Search
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Highlight } from '../../../src/components/highlight'
+
+There are 2 verisons of Member Search:
+
+1. (Default) - With Table View of found Members showing Job ready status.
+2. (Old) - Upon Search and click takend to Member Details.
+
+## Default Member Search - Job Ready Table View Preview
+
+<img src={useBaseUrl('img/admin/members/member-search-default.png')} alt='member search default view' />
+
+### Left Side
+
+On the left you can find the Member Search input.
+
+As well as the Instructions list.
+
+You can switch to the Old Member Search by clicking the link which is the last item in the instructions list on the left.
+
+:::note
+Seach is by **last name** first.
+:::
+
+When you start inputing the member's last name the dropdown will populate with possible options from the database.
+Once you select a member they will be added to the **Found Members** table, which will display if the member is currently **[Job Ready](../course/job-ready)**
+
+### Right Side - Found Members Table
+
+You can select a member from the table to be directed to their [Member Details page]('./details').
+
+This table can be:
+- printed
+- csv download file
+
+:::note
+There is a <Highlight variant="success">Green</Highlight> Breifcase icon for Job Ready, and
+
+And a <Highlight variant="danger">Red</Highlight> warning triangle when **not** Job Ready
+:::
+
+### Results
+
+The Found Members table results are saved for the length of time the browser tab remains open.
+
+## Old Member Search
+
+<img src={useBaseUrl('img/admin/members/member-search-old.png')} alt="member search old" />
+
+The original Member Search is a simple **last name** first input.
+
+You will get the same populated dropdown of possible options when you start typing the last name.
+
+:::note
+The difference is once you select the member you are searching for you will be directed to the [Member Detail page](./details)
+:::
+
+:::info
+To switch to the default (new) Member Search click the link that appears as the last item in the instructions list.
+:::

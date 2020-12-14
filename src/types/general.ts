@@ -1,8 +1,7 @@
-export enum Color {
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Success = 'success',
-  Info = 'info',
-  Warning = 'warning',
-  Danger = 'danger',
-}
+export type Color =
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'info'
+  | 'warning'
+  | 'danger'
