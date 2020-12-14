@@ -2,4 +2,28 @@
 id: spreadsheet-csv
 title: Historical Spreadsheet CSV
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import {mdiDownload} from '@mdi/js'
+import Icon from '@mdi/react'
+
+This page will display all the speadsheet csv files that are available for download.
+
+Each week on the weekend there are 2 operations that happen which save **snapshots** of your membership's course certification status.
+
+1. **Training Records** - is all active members, all courses
+2. **Safety Training Records** - is all active members, and only required courses for [Job Ready status]('../course/job-ready')
+
+
+<img src={useBaseUrl('img/admin/members/spreadsheet-csv-records.png')} alt="spreadsheet csv list" />
+
+:::note
+These CSV files are for you to download and safe for your record keeping.
+
+You can download each file by selecting the Download icon <Icon path={mdiDownload} size={1}/> beside each file.
+:::
+
+:::caution
+CertGround will only save these files for 3 Months!
+:::
+
 

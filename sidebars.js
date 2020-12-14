@@ -46,6 +46,7 @@ module.exports = {
           items: [
             'admins/member/create',
             'admins/member/list',
+            'admins/member/details',
             'admins/member/search',
             'admins/member/course-certify',
             'admins/member/required-course-payment',
