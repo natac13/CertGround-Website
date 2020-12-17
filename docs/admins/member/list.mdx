@@ -2,3 +2,51 @@
 id: list
 title: Member List
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl'
+
+A paginated list of member's in your database. First arranged alphabetically by last name.
+
+<img src={useBaseUrl('img/admin/members/members-list.png')} alt="members list" />
+
+## Sort List
+
+The list of members can be sorted by clicking on the headers of the following columns:
+
+- last name
+- member type
+- term
+- using app
+
+## Information Displayed
+
+- last name
+- first name
+- email address
+- member type (ie. Journeyman, Apprentice)
+- apprentice term
+- using app, meaning if they have signed up for CertGround
+
+## Table Actions
+
+At the top right of the table you will see icon button for what can be done with the table, from:
+
+- Search
+- CSV Download
+- Print
+- Change what columns are shown
+- Filter the list, by:
+  - member type
+  - term
+  - if signed up
+- Refresh the list
+
+:::note
+The Print option will only print the currently displyed page of members.
+
+The CSV Download will include all members records retrived from the database.
+Therefore to include more members paginate forward.
+:::
+
+:::info
+A full list of member records and courses completion can be downloaded with the [CSV Spreadsheet page.](./spreadsheet-csv)
+:::
