@@ -110,3 +110,8 @@ html[data-theme='dark'] {
   /* --ifm-hero-text-color: #ffffff; */
   --ifm-blockquote-color: #c0c0c0;
 }
+
+p,
+li {
+  max-width: min(85ch, 100%);
+}
