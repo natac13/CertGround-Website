@@ -2,3 +2,108 @@
 id: create
 title: Class Create
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Highlight } from '../../../src/components/highlight'
+import Icon from '@mdi/react'
+import { mdiRefresh } from '@mdi/js'
+
+## Overview
+
+Classes are the events to train (certify) your membership in the [Courses created][CourseCreate].
+The members have the ability to [sign up][MemberRegister] for Classes themselves, or admins can [register][AdminRegister] members manually.
+
+The information used to create a Class is split up into 3 different pages, with a review page to confirm your input.
+
+:::note
+You cannot move to the next page without first filling out all required information.
+:::
+
+:::note
+Input values are [saved](#inputs-saved) as you complete each page.
+:::
+
+## Page 1: Course Select
+
+<img src={useBaseUrl('/img/admin/classes/class-create-page1.png')} alt="class create page 1" />
+
+- Select the [Course Type](../course/details#course-type)
+- Using the dropdown, select the desired Course; which are listed by name.
+
+:::note
+When you change the Course Type, the Course Select options will update automatically
+:::
+
+## Page 2: Seats, Trainer, Registration Closed
+
+<img src={useBaseUrl('/img/admin/classes/class-create-page2.png')} alt="class create page 2" />
+
+- Set the number of [Seats](./details#seats); this will default to the number of [Spots](../course/details#spots) used when [creating the Course](../course/create#spots)
+- Trainer (optional)
+- Registration Closed: A Checkbox to prevent members from [registering themselves][MemberRegister]
+
+:::note
+Admins (training coordinators) can still [register member][AdminRegister] to Classes that have set Registraion Closed
+:::
+
+## Page 3: Class Dates
+
+<img src={useBaseUrl('/img/admin/classes/class-create-page3.png')} alt="class create page 3" />
+
+This is where the Class Dates are set. The initial dates will be populated based off the [Hours per Day][HpD] that was set when [creating the Course][HpDC].
+The first date will be set to start for *tomorrow* @ 9am, then end time calculated from the respective [Hours per Day][HpD] value.
+
+You can remove a Class Date by clicking on the <Highlight variant="danger">X</Highlight>.
+
+:::note
+Multi-day Classes are based off the [Hours per Day][HpD] that was set when [creating the Course][HpDC].
+
+If the Class spans multiple days, then the initial dates will start at 9am.
+:::
+
+:::note
+You can reset the Class Dates back to the initial values, which are based off the [Hours per Day][HpD] of the Course.
+:::
+
+### Auto Dates vs Manual Dates
+
+There is a Switch that will change between Auto Dates and Manual Dates. When Auto Dates is selected, the admin needs to only adjust the Start time of each day, with the End time calculated based off the [Hours per Day][HpD] respective value.
+
+:::caution
+If Manual Dates are set then **both** Start and End times need to be set be the admin.
+:::
+
+## Review Page
+
+<img src={useBaseUrl('/img/admin/classes/class-create-review.png')} alt="class create review page" />
+
+The Review Page is a Chart with *clickable* rows showing the information that will be used to create the new Class.
+
+If you would like to change a value, simply click on the row for the value you wish to adjust and you will be taken to the page to make your changes. Once complete you can navigate forward with the <Highlight variant="primary">NEXT</Highlight> button as before.
+
+When you are ready to create the Class click the CREATE CLASS button in the Submit Zone.
+
+You will see a notification letting you know if the Class was created successfully.
+If successful, there will be an option to <Highlight variant="secondary">VIEW</Highlight> the new Class [Detail page][ClassDetails].
+
+
+## Inputs Saved
+
+When creating a Class, after each page is complete the input information will be saved to your [session storage][WebStorage]. Meaning the data is saved for the live of the browser window or tab.
+
+You can reset this storage at any time and start again with the Refresh Icon <Icon size={1} path={mdiRefresh} /> at the top right of each page.
+
+:::caution
+If you close your browser or tab the saved data will be lost.
+:::
+
+
+
+[ClassDetails]: ./details
+[CourseDetails]: ../course/details
+[HpD]: ../course/details#hours-per-day
+[HpDC]: ../course/create#page-2
+[WebStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+[AdminRegister]: ./details#register-members
+[MemberRegister]: ../../member/class-calendar#register
+[CourseCreate]: ../course/create

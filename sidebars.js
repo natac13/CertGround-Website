@@ -37,6 +37,8 @@ module.exports = {
           items: [
             'admins/class/create',
             'admins/class/calendar',
+            'admins/class/details',
+            'admins/class/emailer',
             'admins/class/search'
           ]
         },
@@ -59,6 +61,7 @@ module.exports = {
           items: [
             'admins/course/create',
             'admins/course/list',
+            'admins/course/details',
             'admins/course/job-ready'
           ]
         }

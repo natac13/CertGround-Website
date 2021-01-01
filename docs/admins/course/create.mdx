@@ -3,3 +3,90 @@ id: create
 title: Course Create
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { Highlight } from '../../../src/components/highlight'
+import Icon from '@mdi/react'
+import { mdiRefresh } from '@mdi/js'
+
+
+## Overview
+
+The information used to create a Course is split up into 3 different pages, with a review page to confirm your input.
+
+:::note
+You cannot move to the next page without first filling out all required information.
+:::
+
+:::note
+Input values are [saved](#inputs-saved) as you complete each page.
+:::
+
+## Page 1: Name, Course Type, Available To
+
+<img src={useBaseUrl('/img/admin/courses/course-create-page1.png')} alt="course create page 1" />
+
+- Name: Minimun of 4 character long.
+- Course Type
+- Available To: Which members can [register themselves][MemberRegister] to Classes [created][ClassCreate] for this Course
+
+## Page 2: Seats, Expiry, Hours Per Day
+
+<img src={useBaseUrl('/img/admin/courses/course-create-page2.png')} alt="course create page 2" />
+
+
+- Total Seats: The number of seats available by default when [creating a Class][ClassCreatePage2].
+- Expiry Length In Months.
+    - Min 0
+    - Max 60 (10 years)
+    - Must be a multiple of 6
+- Hours Per Day: Number values representing the length of time the Classes will take per day.
+  - Min 0.5
+  - Max 12
+  - Steps by 0.5
+
+<!-- <img src={useBaseUrl('/img/admin/courses/course&#45;create&#45;page2&#45;2.png')} alt="course create page 2" /> -->
+
+### Course without Expiry
+
+:::note
+To create a Course without and expiry length set Expiry Lenght in Months to **0**.
+:::
+
+
+## Page 3: Cost, Required, Apprentice Mandated
+
+- Cost per Class: Optional field for your records.
+- Required for [Job Ready Status][JobReadyStatus].
+- Apprentice mandated: Switch for Yes / No
+  - If yes a Term dropdown will appear to select the first term the apprentice members are required to take the course.
+
+<img src={useBaseUrl('/img/admin/courses/course-create-page3.png')} alt="course create page 3" />
+
+## Review
+
+The Review Page is a Chart with *clickable* rows showing the information that will be used to create the new Course.
+
+If you would like to change a value, simply click on the row for the value you wish to adjust and you will be taken to the page to make your changes. Once complete you can navigate forward with the <Highlight variant="primary">NEXT</Highlight> button as before.
+
+When you are ready to create the Class click the CREATE COURSE button in the Submit Zone.
+
+You will see a notification letting you know if the Course was created successfully.
+
+<img src={useBaseUrl('/img/admin/courses/course-create-review.png')} alt="course create review page" />
+
+## Inputs Saved
+
+When creating a Course, after each page is complete the input information will be saved to your [session storage][WebStorage]. Meaning the data is saved for the live of the browser window or tab.
+
+You can reset this storage at any time and start again with the Refresh Icon <Icon size={1} path={mdiRefresh} /> at the top right of each page.
+
+:::caution
+If you close your browser or tab the saved data will be lost.
+:::
+
+[ClassCreate]: ../class/create
+[ClassCreatePage2]: ../class/create#page-2-seats-trainer-registration-closed
+[MemberRegister]: ../../member/class-calendar#register
+[AdminRegister]: ../class/details#register-members
+[JobReadyStatus]: ./job-ready#job-ready-status
+[WebStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
