@@ -1,14 +1,12 @@
-import { Icon } from '@mdi/react'
 import clsx from 'clsx'
 import React from 'react'
 import useBaseUrl from '@docusaurus/useBaseUrl'
-import styles from './styles.module.css'
 
 interface Props {
   imageUrl?: string
   title: string
   description: React.ReactElement
-  icon?: string
+  icon?: React.ReactNode
 }
 
 export const Feature: React.FC<Props> = ({
@@ -18,17 +16,18 @@ export const Feature: React.FC<Props> = ({
   icon
 }: Props) => {
   const imgUrl = useBaseUrl(imageUrl)
+  const Icon = icon
   return (
-    <div className={clsx('col col--4', styles.feature)}>
-      <div className="text--center">
+    <div className="justify-items-center grid grid-cols-1 gap-3">
+      <div className="flex items-start w-36 h-36">
         {icon ? (
-          <Icon size={4} path={icon} />
+          <Icon className="w-full h-full" />
         ) : imgUrl ? (
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <img className="w-full h-full" src={imgUrl} alt={title} />
         ) : null}
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className="mb-1 text-4xl text-center">{title}</h3>
+      <p className="text-lg place-self-end">{description}</p>
     </div>
   )
 }

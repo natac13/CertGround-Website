@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { mdiClipboardText, mdiShareVariant, mdiTargetAccount } from '@mdi/js'
+import { BiTargetLock, BiShareAlt, BiClipboard } from 'react-icons/bi'
 import Layout from '@theme/Layout'
 import clsx from 'clsx'
 import React from 'react'
@@ -24,7 +24,7 @@ const clients = [
 export const features = [
   {
     title: 'Simple Training Center Management',
-    icon: mdiClipboardText,
+    icon: BiClipboard,
     description: (
       <>
         Control all your training records in one place with ease! Create the
@@ -36,7 +36,7 @@ export const features = [
   },
   {
     title: 'Focused on Ease of Use.',
-    icon: mdiTargetAccount,
+    icon: BiTargetLock,
     description: (
       <>
         CertGround™ was designed to be as automatic as possible. Your job is
@@ -47,8 +47,8 @@ export const features = [
     )
   },
   {
-    title: 'Sustainable Record Keeping & Certifcate Sharing',
-    icon: mdiShareVariant,
+    title: 'Sustainable Record Keeping & Certificate Sharing',
+    icon: BiShareAlt,
     description: (
       <>
         By moving your training center&apos;s record keeping to CertGround™ your
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
       description={`${siteConfig.description}`}
     >
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
+        <div className="container mx-auto">
           <div className="row">
             <div
               className="col"
@@ -88,8 +88,8 @@ const Home: React.FC = () => {
               />
             </div>
           </div>
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="my-8 text-6xl ">{siteConfig.title}</h1>
+          <p className="mb-4 text-3xl text-center">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
@@ -105,25 +105,23 @@ const Home: React.FC = () => {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className={clsx('row', styles.featuresRow)}>
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
+          <section className="w-screen my-8">
+            <div className="container flex flex-row w-full mx-auto gap-5">
+              {features.map((props, idx) => (
+                <Feature key={idx} {...props} />
+              ))}
             </div>
           </section>
         )}
 
         {clients && clients.length > 0 && (
           <section className={styles.clientsWrapper}>
-            <H2Heading id="clients" className={styles.clientsHeader}>
+            <H2Heading id="clients" className="text-4xl text-center">
               Happy Clients
             </H2Heading>
-            <section className={styles.clients}>
-              <div className="container">
-                <div className="row">
+            <section className="w-screen my-8">
+              <div className="container mx-auto">
+                <div className="flex flex-row justify-center w-full">
                   {clients.map((props, idx) => (
                     <Client key={idx} {...props} />
                   ))}

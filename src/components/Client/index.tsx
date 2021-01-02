@@ -1,7 +1,5 @@
-import clsx from 'clsx'
 import React from 'react'
 import useBaseUrl from '@docusaurus/useBaseUrl'
-import styles from '../Feature/styles.module.css'
 
 interface Props {
   imageUrl?: string
@@ -11,21 +9,18 @@ interface Props {
 
 export const Client: React.FC<Props> = ({ imageUrl, name, website }: Props) => {
   const imgUrl = useBaseUrl(imageUrl)
+  if (!imgUrl) {
+    return null
+  }
+
   return (
-    <div className={clsx('col', styles.feature)}>
-      <div className="text--center">
-        {imgUrl && (
-          <a
-            href={`https://${website}`}
-            className="text--center"
-            target="_blank"
-            title={name}
-            rel="noreferrer"
-          >
-            <img className={styles.featureImage} src={imgUrl} alt={name} />
-          </a>
-        )}
-      </div>
-    </div>
+    <a
+      href={`https://${website}`}
+      target="_blank"
+      title={name}
+      rel="noreferrer"
+    >
+      <img className="sm:w-55 w-60" src={imgUrl} alt={name} />
+    </a>
   )
 }

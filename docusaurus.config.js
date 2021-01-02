@@ -17,7 +17,7 @@ module.exports = {
     navbar: {
       title: 'CertGround',
       logo: {
-        alt: 'CertGround Momogram Logo',
+        alt: 'CertGround Monogram Logo',
         src: 'img/CertGround-Monogram-White-BlueBG.png'
       },
       items: [
@@ -28,6 +28,7 @@ module.exports = {
           position: 'left'
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'quote', label: 'Request Quote', position: 'left' },
         // {
         //   to: '/#clients',
         //   activeBasePath: '/',
@@ -88,8 +89,12 @@ module.exports = {
           ]
         },
         {
-          title: 'Sean Campbell',
+          title: 'Contact Us',
           items: [
+            {
+              label: 'Email',
+              href: 'mailto:sean.campbell13@gmail.com'
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/natac13'
@@ -136,6 +141,7 @@ module.exports = {
     ]
   ],
   plugins: [
+    'docusaurus-tailwindcss-loader',
     [
       '@docusaurus/plugin-ideal-image',
       {
