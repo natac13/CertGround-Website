@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js'
 
-<img src={useBaseUrl('../static/img/CertGround-Logo-Full-White-BlueBG.png')} alt="certground logo" />
+<img src={useBaseUrl('/img/CertGround-Logo-Full-White-BlueBG.png')} alt="certground logo" />
 
 ## Become a Client
 
