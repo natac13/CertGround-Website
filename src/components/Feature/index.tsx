@@ -18,7 +18,7 @@ export const Feature: React.FC<Props> = ({
   const imgUrl = useBaseUrl(imageUrl)
   const Icon = icon
   return (
-    <div className="justify-items-center grid grid-cols-1 gap-3">
+    <div className="justify-items-center grid grid-cols-1 gap-5">
       <div className="flex items-start w-36 h-36">
         {icon ? (
           <Icon className="w-full h-full" />
@@ -26,7 +26,7 @@ export const Feature: React.FC<Props> = ({
           <img className="w-full h-full" src={imgUrl} alt={title} />
         ) : null}
       </div>
-      <h3 className="mb-1 text-4xl text-center">{title}</h3>
+      <h3 className="self-center mb-1 text-4xl text-center">{title}</h3>
       <p className="text-lg place-self-end">{description}</p>
     </div>
   )

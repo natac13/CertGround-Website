@@ -38,7 +38,7 @@ const Quote: React.FC = () => {
               <a
                 href="mailto:sean.campbell13@gmail.com"
                 title="email"
-                className="w-full h-full px-6 py-3 text-xl border-2 border-solid rounded hover:bg-primary hover:text-white transition duration-300 border-primary hover:no-underline"
+                className="px-6 py-2 text-lg font-semibold border-2 border-solid transition duration-300 rounded-md hover:bg-primary hover:text-background hover:no-underline border-primary text-primary"
               >
                 Email
               </a>

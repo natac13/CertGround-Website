@@ -69,44 +69,32 @@ const Home: React.FC = () => {
       title={`${siteConfig.title}`}
       description={`${siteConfig.description}`}
     >
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container mx-auto">
-          <div className="row">
-            <div
-              className="col"
-              style={{ display: 'flex', justifyContent: 'center' }}
-            >
-              <ThemedImage
-                sources={{
-                  dark: useBaseUrl('img/CertGround-Monogram-White-BlueBG.png'),
-                  light: useBaseUrl(
-                    'img/CertGround-Monogram-White-TransparentBG.png'
-                  )
-                }}
-                alt="CertGround™ monogram logo"
-                width={200}
-              />
-            </div>
-          </div>
-          <h1 className="my-8 text-6xl ">{siteConfig.title}</h1>
-          <p className="mb-4 text-3xl text-center">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--lg',
-                styles.getStarted
-              )}
-              to={useBaseUrl('docs/getting-started')}
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
+      <header className="flex flex-col items-center justify-center w-full h-auto py-20 bg-primary">
+        <ThemedImage
+          sources={{
+            dark: useBaseUrl('img/CertGround-Monogram-White-BlueBG.png'),
+            light: useBaseUrl(
+              'img/CertGround-Monogram-White-TransparentBG.png'
+            )
+          }}
+          alt="CertGround™ monogram logo"
+          width={200}
+        />
+        <h1 className="my-8 text-6xl font-bold text-background">
+          {siteConfig.title}
+        </h1>
+        <p className="mb-8 text-3xl text-background">{siteConfig.tagline}</p>
+        <Link
+          className="px-6 py-2 text-lg font-semibold uppercase border-2 border-solid transition duration-300 rounded-md hover:bg-background hover:text-primary hover:no-underline border-background text-background"
+          to={useBaseUrl('docs/getting-started')}
+        >
+          Get Started
+        </Link>
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className="w-screen my-8">
-            <div className="container flex flex-row w-full mx-auto gap-5">
+          <section className="w-screen my-12">
+            <div className="container flex flex-row w-full mx-auto gap-6">
               {features.map((props, idx) => (
                 <Feature key={idx} {...props} />
               ))}
