@@ -8,6 +8,7 @@ module.exports = {
       type: 'category',
       label: 'Members',
       items: [
+        'member/sign-up',
         'member/member-profile',
         'member/cert-share',
         'member/class-calendar',

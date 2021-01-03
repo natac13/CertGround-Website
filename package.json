@@ -1,6 +1,6 @@
 {
   "name": "cert-ground-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -15,23 +15,29 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.69",
-    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.69",
-    "@docusaurus/preset-classic": "2.0.0-alpha.69",
+    "@docusaurus/core": "^2.0.0-alpha.70",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.70",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.70",
     "@mdi/js": "^5.8.55",
     "@mdi/react": "^1.4.0",
     "@mdx-js/react": "^1.6.21",
+    "@tailwindcss/typography": "^0.3.1",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
     "clsx": "^1.1.1",
     "date-fns": "^2.16.1",
+    "docusaurus-tailwindcss-loader": "file:plugins/docusaurus-tailwindcss-loader",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "postcss": "^7.0.34",
+    "postcss-import": "^12.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "browserslist": {
     "production": [

@@ -8,28 +8,29 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js'
 
-## Sign up to CertGround&trade;
+<img src={useBaseUrl('/img/CertGround-Logo-Full-White-BlueBG.png')} alt="certground logo" />
 
-1. Please visit your organization's CertGround&trade; website. For example:
-    - **demo.certground.com**
-    - **ibew120.certground.com**
-2. Please scroll to the bottom of the home page and click the **Register** button.
-3. Please enter the required information:
-    - your email address
-    - password (must include at least 1 uppercase, 1 lowercase and 1 number)
-    - re-enter your password to confirm
-    - answer the skill testing question
-4. Please confirm that you have read and agree with the [End User License Agreement (EULA)](/eula) and [Privacy Policy](/privacy-policy).
-5. Click the **Register** button.
-6. You should see a notifcation at the top left of the screen to let you know if your registration was successful.
-If the notifcation has a red background there was an error.
-7. There will be an email sent to your inbox to confirm your email address and account registration.
-    - The email will be from an address which looks like the following.
-    - **Trainin Coordinator <noreply@training.[YOUR ORGANIZATION].certground.com**
-    - your organization's letter head will be included at the top of the email.
-8. Please read the email and follow the link **'Complete Registration to CertGround&trade;'**.
-9. The link should re-direct you to the login page.
-10. Please enter your email and password to view your profile.
+## Become a Client
+
+If you are a construction organization or union hall that would like to use CertGround&trade; for your training center management, please visit the [Request Quote](../quote) page for more information and to contact **Sean Campbell** at sean.campbell13@gmail.com
+
+## Member Sign up
+
+If you are a Member of an organization that is a Client of CertGround&trade; and are looking to sign up, please follow the [steps listed here.](./member/sign-up)
+
+## Training Coordinator / Admin
+
+As a Training Coordinator know that the job of CertGround&trade; is to make your job **easier**!
+
+CertGround&trade; allows you to fully manage your membership, from [creating][MemberCreate], [updating][MemberUpdate] and [deleting][MemberDelete] members, to [certifying][MemberCertify] members in the [Courses created][CourseCreate].
+
+To find out more please see the corresponding documentation page that relates to your question under the **Admins** section.
+
+As a brief overview:
+- **Courses** are what the Membership get trained and certified in.
+- **Classes** are the event that Members can register for to receive training for a respective Course.
+- **Members** represents the persons your organization / union hall is responsible for training.
+- **Dashboard** is a graphical overview of your Membership's training status
 
 ## Navigation
 
@@ -43,4 +44,8 @@ You will see a menu very similar to the example shown in the picture below;
 <img src={useBaseUrl('img/nav-menu.png')} alt="nav menu button" />
 </div>
 
-
+[MemberCreate]: ./admins/member/create
+[MemberCertify]: ./admins/member/course-certify
+[MemberUpdate]: ./admins/member/details#update
+[MemberDelete]: ./admins/member/details#delete
+[CourseCreate]: ./admins/course/create
