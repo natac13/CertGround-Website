@@ -33,12 +33,6 @@ jobs:
       - name: Build website
         run: yarn build
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          start: yarn serve build
-          wait-on: 'http://localhost:3000'
-
       - name: Copy files to S3
         env:
           BUCKET: ${{ secrets.AWS_BUCKET }}
