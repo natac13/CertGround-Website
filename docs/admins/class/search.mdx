@@ -7,8 +7,49 @@ import { Highlight } from '../../../src/components/highlight'
 
 ## Overview
 
+Class Search is available to find all Classes for a specified Course within a specified date range; limited to 90 days window.
+Admins can view Classes with the [Class Calendar][ClassCalendar], 6 months previous and 6 months in advance; where Members and only view 3 months previous. Outside that date range please use the Class Search page described below.
+
 <img src={useBaseUrl('/img/admin/classes/class-search.png')} alt="class search" />
+
+## Steps
+
+1. Select the desired Course
+2. Modify the date range - defaults to previous 90 days, and must be not larger than a 90 day span.
+3. View [found Classes](#found-classes) in the chart to the right on desktop view and below on mobile.
+
+## Date Range
+
+The Date Range is limited to a 90 days span.
+
+You will see a warning if trying to search outside this range with the maximum date noted.
 
 ## Found Classes
 
+When you search for Classes any matching results will appear in the Found Classes chart. You can click on these Classes to be taken to their respective [Class Detail page][ClassDetails].
+
+Some information is displayed in the chart:
+
+- Course Name of the Class
+- Start date
+- [Course type][CourseType]
+- If the Class is Completed
+
+:::note
+Your last search results are saved to [session storage][SessionStorage].
+:::
+
+:::tip
+Searching for Classes of the same Course withing a different [Date Range](#date-range) will add the results to the Found Classes Chart.
+:::
+
+:::caution
+Searching for Classes of a different Course will overwrite your previous search results.
+:::
+
 <img src={useBaseUrl('/img/admin/classes/class-search-found-classes.png')} alt="class search found classes" />
+
+[ClassCalendar]: ./calendar
+[CourseType]: ../course/details#course-type
+[ClassDetails]: ./details
+[SessionStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
