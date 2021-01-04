@@ -11,8 +11,12 @@
     "deploy": "aws s3 sync ./build s3://certground.com --exact-timestamps --delete",
     "invalidate": "./cdn-cache-invalidate.sh",
     "postdeploy": "yarn run invalidate",
-    "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "serve": "docusaurus serve build",
+    "clear": "docusaurus clear",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cy:open",
+    "test:e2e:ci": "start-server-and-test start http://localhost:3000 cy:run"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.70",
@@ -53,12 +57,17 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.69",
+    "@testing-library/cypress": "^7.0.3",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^17.0.0",
     "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.6",
+    "axe-core": "^4.1.1",
+    "cypress": "^6.2.0",
+    "cypress-axe": "^0.12.0",
     "eslint": "^7.12.1",
     "prettier": "^2.2.1",
+    "start-server-and-test": "^1.11.7",
     "typescript": "^4.1.2"
   }
 }

@@ -11,7 +11,7 @@ import styles from './styles.module.css'
 import Heading from '@theme/Heading'
 import ThemedImage from '@theme/ThemedImage'
 
-const H2Heading = Heading('h2')
+const H3Heading = Heading('h3')
 
 const clients = [
   {
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
         <h1 className="my-8 text-6xl font-bold text-background">
           {siteConfig.title}
         </h1>
-        <p className="mb-8 text-3xl text-background">{siteConfig.tagline}</p>
+        <h2 className="mb-8 text-3xl text-background">{siteConfig.tagline}</h2>
         <Link
           className="px-6 py-2 text-lg font-semibold uppercase border-2 border-solid transition duration-300 rounded-md hover:bg-background hover:text-primary hover:no-underline border-background text-background"
           to={useBaseUrl('docs/getting-started')}
@@ -104,9 +104,9 @@ const Home: React.FC = () => {
 
         {clients && clients.length > 0 && (
           <section className={styles.clientsWrapper}>
-            <H2Heading id="clients" className="text-4xl text-center">
+            <H3Heading id="clients" className="text-4xl text-center">
               Happy Clients
-            </H2Heading>
+            </H3Heading>
             <section className="w-screen my-8">
               <div className="container mx-auto">
                 <div className="flex flex-row justify-center w-full">

@@ -14,11 +14,11 @@ const Quote: React.FC = () => {
       title={`${siteConfig.title}`}
       description={`${siteConfig.description}`}
     >
-      <section className="mx-auto max-w-prose">
-        <header>
-          <h1 className="text-center">Request a Quote</h1>
-        </header>
-        <div id="pricing">
+      <header>
+        <h1 className="text-center">Request a Quote</h1>
+      </header>
+      <main className="mx-auto max-w-prose">
+        <article id="pricing">
           <h2>Pricing</h2>
           <p>
             Pricing for CertGround&trade; is based off the total number of
@@ -29,9 +29,9 @@ const Quote: React.FC = () => {
             <span className="italic">do not</span> count towards your total
             Member.
           </p>
-        </div>
-        <div id="contact-us">
-          <h2>Contact Us</h2>
+        </article>
+        <article id="contact-us">
+          <h3>Contact Us</h3>
           <p>You can contact a CertGround&trade; sales representative below</p>
           <ul className="p-0 my-6 list-none">
             <li className="inline-block w-full box-border">
@@ -44,8 +44,8 @@ const Quote: React.FC = () => {
               </a>
             </li>
           </ul>
-        </div>
-      </section>
+        </article>
+      </main>
     </Layout>
   )
 }
