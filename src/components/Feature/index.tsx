@@ -13,12 +13,12 @@ export const Feature: React.FC<Props> = ({
   imageUrl,
   title,
   description,
-  icon
+  icon,
 }: Props) => {
   const imgUrl = useBaseUrl(imageUrl)
   const Icon = icon
   return (
-    <div className="justify-items-center grid grid-cols-1 gap-5">
+    <div className="max-w-prose justify-items-center grid grid-cols-1 gap-5">
       <div className="flex items-start w-36 h-36">
         {icon ? (
           <Icon className="w-full h-full" />

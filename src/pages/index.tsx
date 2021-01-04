@@ -17,8 +17,8 @@ const clients = [
   {
     name: 'IBEW120',
     imageUrl: 'img/IBEW120.png',
-    website: 'ibew120.ca'
-  }
+    website: 'ibew120.ca',
+  },
 ]
 
 export const features = [
@@ -32,7 +32,7 @@ export const features = [
         those Classes, saving the training records of the Members who
         successfully completed the Course.
       </>
-    )
+    ),
   },
   {
     title: 'Focused on Ease of Use.',
@@ -44,7 +44,7 @@ export const features = [
         keeping. Plus every week your membership is checked for upcoming expired
         Courses; an email notice is sent to those affected.
       </>
-    )
+    ),
   },
   {
     title: 'Sustainable Record Keeping & Certificate Sharing',
@@ -56,8 +56,8 @@ export const features = [
         new employers. Members can generate a QRCode which with link to a
         Certification Share Table. <strong>No more plastic cards!</strong>
       </>
-    )
-  }
+    ),
+  },
 ]
 
 const Home: React.FC = () => {
@@ -75,15 +75,17 @@ const Home: React.FC = () => {
             dark: useBaseUrl('img/CertGround-Monogram-White-BlueBG.png'),
             light: useBaseUrl(
               'img/CertGround-Monogram-White-TransparentBG.png'
-            )
+            ),
           }}
           alt="CertGround™ monogram logo"
           width={200}
         />
-        <h1 className="my-8 text-6xl font-bold text-background">
+        <h1 className="my-8 text-6xl font-bold text-background text-center">
           {siteConfig.title}
         </h1>
-        <h2 className="mb-8 text-3xl text-background">{siteConfig.tagline}</h2>
+        <h2 className="mb-8 text-3xl text-center text-background">
+          {siteConfig.tagline}
+        </h2>
         <Link
           className="px-6 py-2 text-lg font-semibold uppercase border-2 border-solid transition duration-300 rounded-md hover:bg-background hover:text-primary hover:no-underline border-background text-background"
           to={useBaseUrl('docs/getting-started')}
@@ -94,7 +96,7 @@ const Home: React.FC = () => {
       <main>
         {features && features.length > 0 && (
           <section className="w-screen my-12">
-            <div className="container flex flex-row w-full mx-auto gap-6">
+            <div className="container flex flex-col items-center w-full mx-auto lg:flex-row gap-6">
               {features.map((props, idx) => (
                 <Feature key={idx} {...props} />
               ))}
