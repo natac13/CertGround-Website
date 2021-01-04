@@ -6,4 +6,39 @@ title: Class Emailer
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import { Highlight } from '../../../src/components/highlight'
 
-<img src={useBaseUrl('/img/admin/classes/class-emailer.png')} alt="class emailer" />
+## Overview
+
+The Class Emailer Page allows admins to notify the entire Membership about new Classes.
+Upon visiting the page, all new, upcoming Classes, which have not already been announance to the Membership.
+At the top there are a list of instructions that are small reminders of the steps.
+
+<img src={useBaseUrl('/img/admin/classes/class-emailer.png')} alt="class emailer instructions and member type selection" />
+
+## Steps
+
+1. Select the [Member Types][MemberType] of the Membership you want to receive the new Class email notice.
+2. Select which Classes to include; multiple Classes can be sent with one email.
+3. Select the Classes that are mandatory for [Job Ready Status][JobReady].
+4. Click the **EMAIL MEMBERS** button in the submit zone; a confim popup will appear.
+5. Confirm sending the email notice. [See below](#confirm-email-popup)
+
+<img src={useBaseUrl('/img/admin/classes/class-emailer-2.png')} alt="class emailer classes and submit button" />
+
+## Confirm Email Popup
+
+Do to the impact of this action, please type the requested text to confirm sending the email notice to your Membership.
+
+<img src={useBaseUrl('/img/admin/classes/class-emailer-3.png')} alt="class emailer confirm popup" />
+
+## Which Members Get Notified
+
+All [active][MemberActive] Members with emails of your choosen [Member Types][MemberType] which have not choosen to [unsubscribe][MemberUnsubscribe] from CertGround&trade; emails, and have not been [banned from email activity][EmailBanned].
+
+
+[EmailBanned]: ../member/details#email-banned
+[MemberActive]: ../member/details#active
+[MemberUnsubscribe]: ../member/details#unsubscribe
+[MemberType]: ../member/details#member-type
+[JobReady]: ../course/job-ready#job-ready-status
+
+
