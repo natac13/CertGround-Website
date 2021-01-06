@@ -3,37 +3,137 @@ id: details
 title: Class Details
 ---
 
+import VideoWrapper from '../../../src/components/VideoWrapper.tsx'
+
+
 ## Register Members
+
+Admins can register Members to Classes manually. Please see the video below for a demonstration of how this is done.
+
+You can add multiple Members at once. They are added in the order shown.
+
+:::info
+Any Members registered over the [Seats](#seats) limit will be added to the [Waiting List][WaitingList]
+:::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/epvl3ttemZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
+### Override Seats
+
+:::tip
+You can stop Members from being added to the [Waiting List][WaitingList] by selecting the **Override Max Seats** option just under where you search for members to register.
+:::
 
 ## Unregister Members
 
-## Print Class Atendance List
+To unregister Member from a Class please see the demonstration video below.
+
+:::note
+If you are unregistering Member(s) from a full Class with Members on the [Waiting List][WaitingList], the spots will be automatically filled by the [Waiting List][WaitingList] Members in a [FIFO](https://en.wikipedia.org/wiki/FIFO_and_LIFO_accounting#:~:text=%22FIFO%22%20stands%20for%20first%2D,is%20the%20cost%20expensed%20first.) basis.
+:::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oOHyhxZqzWQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
+## Print Class Attendance List
+
+Admins can print off Class Attendance List for each day of the Class. See the Video demonstration below.
+
+:::note
+Enter the number for the corresponding Class day for which you wish to acquire the attendance list
+:::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lZIzJhBf3II" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
 
 ## Copy Attending Member Emails
 
+Admins can copy all the Attendance List Member emails. See video below.
+
+:::tip
+This is useful for sending a mass email. Simply follow the directions and `Ctrl+v`(paste) where you need the email, likely the **TO** field for an email.
+:::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s9-nOlc_sPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
 ## Send New Class Email Notification
 
-## Complete The Class
+You can send an email notification to the entire Membership with the [Class Emailer](./emailer). See the video of how to get there from the Class Detail page.
 
-## The Waiting List
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jKYv3kkKY7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
+## Complete Class
+
+Completing the Class will automatically update all the Member course certificate records.
+
+:::note
+Each Member which successfully completed the Class will receive an email notice once the training coordinator completes the class.
+:::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HA3YA6vUtWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
+## Waiting List
+
+The Waiting List is a place to add Members once the [Attendance List][AttendanceList] has been filled.
+
+If the [Attendance List][AttendanceList] is full and there are member(s) on the Waiting list, any time a Member is [Unregistered][AdminUnregister] by an admin or they [unregister themselves][MemberUnregister], the first Member(s) on the Waiting list will be transferred to the [Attendance List][AttendanceList] and sent and email notification letting them know they have been Register to the Class.
 
 ### Add Members to Waiting List
 
+Members get added to the Waiting List automatically when the [Attendance List][AttendanceList] is full and either the admin [Registered][AdminRegister] them or they [register][MemberRegister] themselves.
+
+Admins can force members onto the [Attendance List][AttendanceList] with the [Override Seats][OverrideSeats] option.
+
 ### Remove Member from Waiting List
+
+To remove Members from the Waiting List, select the checkbox next to the Member(s) you wish to remove. Then click the **Remove Members** button.
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ccosETTTlu4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
 
 ## Update Class
 
 ### Change Class Dates
+
+Admins can change the Dates associated with the Class.
+
+You can:
+- Add new days
+- Remove days
+- Change start time with automatic end time update
+- Change start time **without** automatic end time update
+- Reset Dates back to original
 
 :::note
 When you change the dates in anyway, an email notice will be sent to the Attendance List of Members.
 Waiting List member will **not** receive an email.
 :::
 
+<VideoWrapper aspectRatio={9/16}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yigv5x057BY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
 ### Seats
 
 Seats is how many members can be trained at once with each Class. Seats will default to the number of [Spots](../course/details#spot) set when [creating the Course](../course/create#page-2).
 Admins can change the default value when [creating the Class](./create#page-2), and after the Class has been created
+
+The Seats limit will determine when Members are added to the [Waiting List][WaitingList].
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mGQJGkRAQ6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
 
 ### Trainer
 
@@ -45,10 +145,26 @@ Registration Closed, when set will prevent member from [registering themselves](
 
 ## Delete Class
 
+Deleting a Class should only be done for Classes that have not yet happened.
+
 :::caution
-Classes cannot be deleted until all members have been Unregistered and removed from the waiting list.
+Classes cannot be deleted until all members have been [Unregistered][AdminUnregister] and removed from the [Waiting List][WaitingList].
 :::
 
 :::caution
-Completed Classes cannot be deleted
+[Completed][ClassComplete] Classes cannot be deleted
 :::
+
+<VideoWrapper>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AZ0bRPt3qwQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</VideoWrapper>
+
+
+[MemberRegister]: ../../member/class-calendar#register
+[MemberUnregister]: ../../member/class-calendar#unregister
+[AdminRegister]: #register-members
+[AdminUnregister]: #unregister-members
+[AttendanceList]: #attendance-list
+[WaitingList]: #waiting-list
+[OverrideSeats]: #override-seats
+[ClassComplete]: #complete-class
