@@ -113,6 +113,7 @@ html[data-theme='dark'] {
   /* --ifm-heading-color: #ffffff; */
   /* --ifm-hero-text-color: #ffffff; */
   --ifm-blockquote-color: #c0c0c0;
+  /* --ifm-menu-color-active: var(--ifm-color-primary-lighter); */
 }
 
 p,

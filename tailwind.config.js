@@ -12,7 +12,7 @@ module.exports = {
           light: 'var(--ifm-color-primary-light)',
           lighter: 'var(--ifm-color-primary-lighter)',
           lightest: 'var(--ifm-color-primary-lightest)',
-          contrast: 'var(--ifm-font-color-base)'
+          contrast: 'var(--ifm-background-color)',
         },
         secondary: {
           DEFAULT: 'var(--ifm-color-secondary)',
@@ -22,9 +22,9 @@ module.exports = {
           light: 'var(--ifm-color-secondary-light)',
           lighter: 'var(--ifm-color-secondary-lighter)',
           lightest: 'var(--ifm-color-secondary-lightest)',
-          contrast: 'var(--ifm-font-color-base)'
+          contrast: 'var(--ifm-background-color)',
         },
-        background: 'var(--ifm-background-color)'
+        background: 'var(--ifm-background-color)',
       },
       typography: {
         DEFAULT: {
@@ -33,19 +33,21 @@ module.exports = {
             a: {
               color: 'var(--ifm-link-color)',
               '&:hover': {
-                color: 'var(--ifm-link-hover-color)'
-              }
-            }
-          }
-        }
-      }
-    }
+                color: 'var(--ifm-link-hover-color)',
+              },
+            },
+          },
+        },
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {
+      backgroundOpacity: ['hover'],
+    },
   },
   corePlugins: {
-    preflight: false
+    preflight: false,
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/typography')],
 }

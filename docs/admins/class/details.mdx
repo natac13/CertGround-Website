@@ -4,20 +4,35 @@ title: Class Details
 ---
 
 import VideoWrapper from '../../../src/components/VideoWrapper.tsx'
+import { mdiAccountMultiplePlus, mdiAccountMultipleMinus, mdiCheckboxMarkedCircleOutline, mdiPencilOff, mdiEmail, mdiShareVariant, mdiCalendarCheck, mdiPencil, mdiDelete } from '@mdi/js'
+import Button from '../../../src/components/Button.tsx'
+import Icon from '../../../src/components/Icon.tsx'
 
 
 ## Register Members
 
-Admins can register Members to Classes manually. Please see the video below for a demonstration of how this is done.
+Admins can register Members to Classes manually.
 
-You can add multiple Members at once. They are added in the order shown.
+#### Steps
+
+1. Select the <Icon path={mdiAccountMultiplePlus} /> button near the top right.
+2. A search bar appears in the [Attendance List][AttendanceList] section.
+3. Search of Members by last name first.
+4. Click <Button>Register Members</Button> button.
+5. Confirm the action by typing the confirmation text.
+6. See notifications about successfully registering members and about email notices sent.
+
+:::tip
+You can add multiple Members at once and they will be added in the order shown.
+:::
 
 :::info
 Any Members registered over the [Seats](#seats) limit will be added to the [Waiting List][WaitingList]
 :::
 
+
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/epvl3ttemZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/epvl3ttemZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="register members to class demo"></iframe>
 </VideoWrapper>
 
 ### Override Seats
@@ -30,56 +45,91 @@ You can stop Members from being added to the [Waiting List][WaitingList] by sele
 
 To unregister Member from a Class please see the demonstration video below.
 
+#### Steps
+
+1. Select the <Icon path={mdiAccountMultipleMinus} /> button near the top right.
+2. Attendance List Member will have a checkbox appear next to their name.
+3. Select Member(s) you want to unregister.
+4. Click <Button>Remove Select Members</Button> button.
+5. Confirm the action by typing the confirmation text.
+6. See notifications about successfully removing members and about email notices sent.
+
 :::note
-If you are unregistering Member(s) from a full Class with Members on the [Waiting List][WaitingList], the spots will be automatically filled by the [Waiting List][WaitingList] Members in a [FIFO](https://en.wikipedia.org/wiki/FIFO_and_LIFO_accounting#:~:text=%22FIFO%22%20stands%20for%20first%2D,is%20the%20cost%20expensed%20first.) basis.
+If you unregister Member(s) from a full Class with Members on the [Waiting List][WaitingList], the spots will be automatically filled by the [Waiting List][WaitingList] Members in a [FIFO](https://en.wikipedia.org/wiki/FIFO_and_LIFO_accounting#:~:text=%22FIFO%22%20stands%20for%20first%2D,is%20the%20cost%20expensed%20first.) basis.
 :::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oOHyhxZqzWQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oOHyhxZqzWQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="unregister members from class demo"></iframe>
 </VideoWrapper>
 
 ## Print Class Attendance List
 
-Admins can print off Class Attendance List for each day of the Class. See the Video demonstration below.
+Admins can print off Class Attendance List for each day of the Class.
+
+#### Steps
+
+1. Click <Button>Print Attendance List</Button> button.
+2. Enter the number corresponding to the day you want to print off.
+3. Then client <Button>Print</Button>
 
 :::note
 Enter the number for the corresponding Class day for which you wish to acquire the attendance list
 :::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lZIzJhBf3II" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lZIzJhBf3II" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="print attendance list demo"></iframe>
 </VideoWrapper>
 
 ## Copy Attending Member Emails
 
-Admins can copy all the Attendance List Member emails. See video below.
+Admins can copy all the Attendance List Member emails.
+
+#### Steps
+
+1. Click <Icon path={mdiEmail} /> button.
+2. Emails are copied to your clipboard.
+3. Paste the email list where you need them.
 
 :::tip
 This is useful for sending a mass email. Simply follow the directions and `Ctrl+v`(paste) where you need the email, likely the **TO** field for an email.
 :::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s9-nOlc_sPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s9-nOlc_sPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="copy attendance list emails"></iframe>
 </VideoWrapper>
 
 ## Send New Class Email Notification
 
-You can send an email notification to the entire Membership with the [Class Emailer](./emailer). See the video of how to get there from the Class Detail page.
+You can send an email notification to the entire Membership with the [Class Emailer](./emailer).
+
+#### Steps
+
+1. Click <Icon path={mdiShareVariant} /> button.
+2. You will be directed to the [Class Emailer][ClassEmailer] page.
+3. Follow the documentation from there.
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jKYv3kkKY7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jKYv3kkKY7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="send new class email notice demo"></iframe>
 </VideoWrapper>
 
 ## Complete Class
 
 Completing the Class will automatically update all the Member course certificate records.
 
+#### Steps
+
+1. Click <Icon path={mdiCalendarCheck} /> button.
+2. Select the Member who **did not** complete the Class.
+3. Click the <Button>Complete Class</Button>
+4. Enter the confirmation text, and click <Button variant="filled">Complete</Button>
+5. See notification about successfully completing the Class and email notices to Members sent.
+
 :::note
 Each Member which successfully completed the Class will receive an email notice once the training coordinator completes the class.
 :::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HA3YA6vUtWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HA3YA6vUtWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Complete class demo"></iframe>
 </VideoWrapper>
 
 ## Waiting List
@@ -96,10 +146,21 @@ Admins can force members onto the [Attendance List][AttendanceList] with the [Ov
 
 ### Remove Member from Waiting List
 
-To remove Members from the Waiting List, select the checkbox next to the Member(s) you wish to remove. Then click the **Remove Members** button.
+Admins can manually remove Members from the Waiting List.
+
+#### Steps
+
+1. Select the Member(s) on the Waiting List to be removed.
+3. Click the <Button>Remove Members</Button> button.
+4. Enter the confirmation text, and click <Button variant="filled">Remove</Button>
+5. See notification about successfully removing member(s).
+
+:::note
+No email notifications are sent with regards to the removal of Member from the Waiting List.
+:::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ccosETTTlu4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ccosETTTlu4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="remove members from waiting list"></iframe>
 </VideoWrapper>
 
 ## Update Class
@@ -115,13 +176,21 @@ You can:
 - Change start time **without** automatic end time update
 - Reset Dates back to original
 
+#### Steps
+
+1. Click the <Icon path={mdiPencil} /> **Edit Class** Button
+2. Make the changes you need to.
+3. Select <Icon path={mdiCheckboxMarkedCircleOutline} /> **Update Class** button.
+4. You can cancel your changes by selecting the <Icon path={mdiPencilOff} /> **Cancel Edit** button.
+5. See notification about successfully updating the Class.
+
 :::note
 When you change the dates in anyway, an email notice will be sent to the Attendance List of Members.
 Waiting List member will **not** receive an email.
 :::
 
 <VideoWrapper aspectRatio={9/16}>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Yigv5x057BY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yigv5x057BY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="class update dates demo"></iframe>
 </VideoWrapper>
 
 ### Seats
@@ -132,7 +201,7 @@ Admins can change the default value when [creating the Class](./create#page-2), 
 The Seats limit will determine when Members are added to the [Waiting List][WaitingList].
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mGQJGkRAQ6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mGQJGkRAQ6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Class Update demo"></iframe>
 </VideoWrapper>
 
 ### Trainer
@@ -145,18 +214,24 @@ Registration Closed, when set will prevent member from [registering themselves](
 
 ## Delete Class
 
-Deleting a Class should only be done for Classes that have not yet happened.
+#### Steps
 
-:::caution
-Classes cannot be deleted until all members have been [Unregistered][AdminUnregister] and removed from the [Waiting List][WaitingList].
+1. Select the <Icon path={mdiDelete} /> button.
+2. Confirm the delete action by typing the confirmation text.
+3. See notifications about successfully deleting the Class.
+
+:::warning
+Deleting a Class should only be done for Classes that have not yet happened.
 :::
 
-:::caution
+:::note
+Classes cannot be deleted until all members have been [Unregistered][AdminUnregister] and removed from the [Waiting List][WaitingList].
+
 [Completed][ClassComplete] Classes cannot be deleted
 :::
 
 <VideoWrapper>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AZ0bRPt3qwQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AZ0bRPt3qwQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="class delete demo"></iframe>
 </VideoWrapper>
 
 
@@ -168,3 +243,4 @@ Classes cannot be deleted until all members have been [Unregistered][AdminUnregi
 [WaitingList]: #waiting-list
 [OverrideSeats]: #override-seats
 [ClassComplete]: #complete-class
+[ClassEmailer]: ./emailer
