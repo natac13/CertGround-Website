@@ -3,4 +3,104 @@ id: details
 title: Member Details
 ---
 
+import { mdiAccountMultiplePlus, mdiAccountMultipleMinus, mdiCheckboxMarkedCircleOutline, mdiPencilOff, mdiEmail, mdiShareVariant, mdiCalendarCheck, mdiPencil, mdiDelete } from '@mdi/js'
+import Button from '../../../src/components/Button.tsx'
+import Icon from '../../../src/components/Icon.tsx'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+
+
+## Basic Info
+
+On the Member Detail page you will see the same layout for basic Member information as the [Member Create][MemberCreate] page.
+
+The difference is the [status][MemberStatus] section to the right which displays Member information related to their activity on CertGround&trade;.
+
+<img src={useBaseUrl('/img/admin/members/member-details.png')} alt="member detail view" />
+
+### Edit Basic Information
+
+1. Click the <Icon path={mdiPencil} /> **Edit Member** Button
+2. Make the changes you need to.
+3. Select <Icon path={mdiCheckboxMarkedCircleOutline} /> **Update Member** button.
+4. You can cancel your changes by selecting the <Icon path={mdiPencilOff} /> **Cancel Edit** button.
+5. See notification about successfully updating the Member.
+
+## Member Status
+
+Shows Member status elements as they relate to their activity on CertGround.
+Includes a quick dropdown of the Member Courses and the *most recent* date trained.
+
+:::note
+No Member Status elements can be changed by the admins.
+:::
+
+<img src={useBaseUrl('/img/admin/members/member-details-status-sidebar.png')} alt="member detail status sidebar" />
+
+## Member Courses
+
+Below the basic information there is a table which will show all Courses the Member has been trained in.
+
+:::note
+Last Trained Triggers Payment is for the [required Courses][RequiredCourse] only and will determine if the last time the Member was trained in the respective Course, they would receive payment for attending.
+:::
+
+<img src={useBaseUrl('/img/admin/members/member-details-course-table.png')} alt="member course update popup" />
+
+### Historical Dates Trained
+
+:::tip
+To see historical dates in which the member was trained click on the `+n` circle. Where `n` is the number of historical dates hidden from view.
+:::
+
+<img src={useBaseUrl('/img/admin/members/member-details-historical-dates-trained.png')} alt="member course update popup" />
+
+### Edit Member Courses
+
+1. Select the <Icon path={mdiPencil} /> icon for the respective Course row you wish to edit.
+2. Make your changes in the popup: add, remove, reset or change dates trained.
+3. Click <Button variant="filled">Update Course</Button>
+
+
+:::note
+The Trigger Payment option is with regards to [Required Course Payment][RequiredCoursePayment].
+
+This only matters for [required Courses][RequiredCourse] for [job ready status][JobReady].
+:::
+
+<img src={useBaseUrl('/img/admin/members/member-details-course-update-popup.png')} alt="member course update popup" />
+
+
 ## Member Type
+
+Member Type refers to either **Journeyman** or **Apprentice**.
+
+## Active Member
+
+An active member is any member that is active in your organization. A non active member gives you the option of archiving a Member's records.
+
+### Non Active Members
+
+- Cannot login
+- Do not get email notices
+- Cannot be added to Classes
+- Only available as an archive record
+
+
+## Delete Member
+
+#### Steps
+
+1. Select the <Icon path={mdiDelete} /> button at the top right or the <Button color="warning" variant="filled">Delete Member</Button> at the bottom.
+2. Confirm the delete action by typing the confirmation text.
+3. See notifications about successfully deleting the Member.
+
+:::note
+Members **cannot** be deleted if they are currently enrolled for upcoming Classes. You will receive a <Highlight variant="warning">warning</Highlight> notification about which Classes to [unregister][AdminUnregister] the Member from.
+:::
+
+[MemberCreate]: ./create
+[RequiredCoursePayment]: ./required-course-payment
+[RequiredCourse]: ../course/details#required
+[JobReady]: ../course/job-ready#job-ready-status
+[MemberStatus]: #member-status
+[AdminUnregister]: ../class/details#unregister-members
